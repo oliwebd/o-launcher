@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "types": ["@girs/gjs", "@girs/gnome-shell/ambient", "@girs/gnome-shell/extensions/global", "@girs/soup-3.0"],
+    "skipLibCheck": true
+  },
+  "include": [
+    "extension.ts",
+    "prefs.ts",
+    "utils.ts",
+    "types.ts",
+    "DashboardDialog.ts",
+    "components/**/*.ts",
+    "providers/**/*.ts"
+  ]
+}

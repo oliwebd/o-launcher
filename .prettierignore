@@ -1,0 +1,5 @@
+node_modules/
+pnpm-lock.yaml
+schemas/
+*.zip
+ts_errors*.txt

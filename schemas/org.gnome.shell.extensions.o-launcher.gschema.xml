@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="o-launcher">
+  <enum id="org.gnome.shell.extensions.o-launcher.BackgroundStyle">
+    <value nick="blur" value="0"/>
+    <value nick="transparent-20" value="1"/>
+    <value nick="transparent-30" value="2"/>
+    <value nick="transparent-50" value="3"/>
+    <value nick="solid" value="4"/>
+  </enum>
+
+  <schema id="org.gnome.shell.extensions.o-launcher"
+          path="/org/gnome/shell/extensions/o-launcher/">
+
+    <key name="toggle-shortcut" type="as">
+      <default>['&lt;Super&gt;d']</default>
+      <summary>Keybinding to toggle the dashboard</summary>
+    </key>
+
+    <key name="background-style" enum="org.gnome.shell.extensions.o-launcher.BackgroundStyle">
+      <default>'blur'</default>
+      <summary>Glassmorphic background style for the side panels</summary>
+    </key>
+
+    <key name="weather-latitude" type="d">
+      <default>52.37</default>
+      <summary>Latitude used for weather lookups (Open-Meteo, no API key)</summary>
+    </key>
+
+    <key name="weather-longitude" type="d">
+      <default>4.90</default>
+      <summary>Longitude used for weather lookups</summary>
+    </key>
+
+    <key name="weather-city-name" type="s">
+      <default>'Amsterdam'</default>
+      <summary>Display name shown above the weather card</summary>
+    </key>
+
+    <key name="weather-refresh-minutes" type="i">
+      <default>15</default>
+      <range min="5" max="120"/>
+      <summary>How often to refresh weather data</summary>
+    </key>
+
+    <key name="stats-refresh-seconds" type="i">
+      <default>2</default>
+      <range min="1" max="30"/>
+      <summary>How often to refresh CPU/RAM/Disk rings</summary>
+    </key>
+
+    <key name="favorite-apps" type="as">
+      <default>[]</default>
+      <summary>Desktop file IDs pinned to the top of the app launcher</summary>
+    </key>
+
+    <key name="use-fahrenheit" type="b">
+      <default>false</default>
+      <summary>Show temperature in Fahrenheit instead of Celsius</summary>
+    </key>
+
+  </schema>
+</schemalist>

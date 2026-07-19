@@ -1,0 +1,169 @@
+/* O-Launcher — Material 3 glass theme
+   Palette derived from a single indigo seed (#4F5B92), per M3 tonal-palette
+   convention: surfaces step up in lightness, one accent carries all
+   interactive states. Weather/stat accents are secondary tonal pops, not a
+   second unrelated palette. */
+
+.ol-dashboard-root {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* ---------- Shared glass panel (everything except the launcher) ---------- */
+.ormic-panel {
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(30, 35, 60, 0.14);
+    padding: 20px;
+}
+
+.ormic-panel.ormic-bg-transparent-20 { background-color: rgba(255, 255, 255, 0.2); }
+.ormic-panel.ormic-bg-transparent-30 { background-color: rgba(255, 255, 255, 0.3); }
+.ormic-panel.ormic-bg-transparent-50 { background-color: rgba(255, 255, 255, 0.5); }
+.ormic-panel.ormic-bg-solid { background-color: #F3F4F8; }
+
+/* The one sharp, opaque surface in the dashboard: the app launcher. It is
+   deliberately NOT translucent so dense text/icon content stays legible. */
+.ormic-launcher-panel {
+    background-color: #FBFBFE;
+    border: 1px solid rgba(79, 91, 146, 0.12);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(30, 35, 60, 0.18);
+}
+
+/* ---------- Typography ---------- */
+.ol-dashboard-root, .ol-dashboard-root StWidget {
+    font-family: "Inter", "Manrope", "Cantarell", sans-serif;
+    color: #21243B;
+}
+.ormic-headline { font-family: "Manrope", "Inter", sans-serif; font-weight: 700; }
+.ormic-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6B7094;
+}
+.ormic-muted { color: #6B7094; }
+
+/* ---------- Weather card ---------- */
+.ormic-weather-condition { font-size: 15px; font-weight: 600; }
+.ormic-weather-temp { font-size: 44px; font-weight: 700; font-family: "Manrope", sans-serif; }
+.ormic-weather-icon { icon-size: 34px; color: #4F5B92; }
+.ormic-weather-sub { font-size: 13px; color: #6B7094; }
+
+/* ---------- Calendar card ---------- */
+.ormic-calendar-nav-btn {
+    border-radius: 999px;
+    padding: 4px;
+    color: #4F5B92;
+}
+.ormic-calendar-nav-btn:hover { background-color: rgba(79, 91, 146, 0.12); }
+.ormic-calendar-month-label { font-size: 14px; font-weight: 700; }
+.ormic-calendar-weekday { font-size: 11px; font-weight: 600; color: #6B7094; }
+.ormic-calendar-day {
+    border-radius: 999px;
+    font-size: 13px;
+    padding: 6px;
+}
+.ormic-calendar-day.ormic-day-outside { color: rgba(107, 112, 148, 0.35); }
+.ormic-calendar-day.ormic-day-today { background-color: rgba(79, 91, 146, 0.14); font-weight: 700; }
+.ormic-calendar-day.ormic-day-selected {
+    background-color: #4F5B92;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+.ormic-calendar-day:hover { background-color: rgba(79, 91, 146, 0.2); }
+
+/* ---------- Music card ---------- */
+.ormic-music-art {
+    border-radius: 18px;
+    background-color: #DADDF0;
+}
+.ormic-music-title { font-size: 14px; font-weight: 700; }
+.ormic-music-artist { font-size: 12px; color: #6B7094; }
+.ormic-music-transport-btn {
+    border-radius: 999px;
+    padding: 8px;
+    color: #21243B;
+}
+.ormic-music-transport-btn:hover { background-color: rgba(79, 91, 146, 0.14); }
+.ormic-music-play-btn {
+    border-radius: 999px;
+    background-color: #21243B;
+    color: #FFFFFF;
+    padding: 10px;
+}
+.ormic-music-play-btn:hover { background-color: #34375A; }
+
+/* ---------- Stat rings ---------- */
+.ormic-stat-tile {
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 12px;
+}
+.ormic-stat-value { font-size: 20px; font-weight: 700; }
+.ormic-stat-label { font-size: 11px; color: #6B7094; }
+
+/* ---------- Notifications ---------- */
+.ormic-notif-count-pill {
+    background-color: rgba(79, 91, 146, 0.12);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #4F5B92;
+}
+.ormic-notif-group-header { font-size: 13px; font-weight: 700; }
+.ormic-notif-app-icon { icon-size: 20px; }
+.ormic-notif-entry-title { font-size: 12px; font-weight: 600; }
+.ormic-notif-entry-body {
+    font-size: 12px;
+    color: #6B7094;
+}
+.ormic-notif-timestamp { font-size: 11px; color: #A0A4C0; }
+.ormic-notif-group-divider { background-color: rgba(107, 112, 148, 0.15); height: 1px; }
+
+/* ---------- App launcher (middle, sharp) ---------- */
+.ormic-search-entry {
+    background-color: #F1F2F8;
+    border-radius: 16px;
+    padding: 10px 16px;
+    font-size: 14px;
+    border: 2px solid transparent;
+}
+.ormic-search-entry:focus { border-color: #4F5B92; background-color: #FFFFFF; }
+
+.ormic-category-tab {
+    border-radius: 14px;
+    padding: 10px 12px;
+    color: #6B7094;
+    font-size: 13px;
+    font-weight: 600;
+}
+.ormic-category-tab.ormic-category-active {
+    background-color: rgba(79, 91, 146, 0.12);
+    color: #4F5B92;
+}
+.ormic-category-tab:hover { background-color: rgba(79, 91, 146, 0.08); }
+
+.ormic-app-tile {
+    border-radius: 18px;
+    padding: 12px 8px;
+}
+.ormic-app-tile:hover { background-color: rgba(79, 91, 146, 0.1); }
+.ormic-app-tile:active { background-color: rgba(79, 91, 146, 0.18); }
+.ormic-app-icon { icon-size: 40px; }
+.ormic-app-label {
+    font-size: 11px;
+    text-align: center;
+    color: #21243B;
+}
+.ormic-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #6B7094;
+    padding: 4px 8px;
+}
