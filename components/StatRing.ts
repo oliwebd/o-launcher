@@ -34,10 +34,9 @@ class StatRing extends St.BoxLayout {
         this.add_child(this._caption);
     }
 
-    setPercent(percent: number, detail: string): void {
+    setPercent(percent: number, _detail: string): void {
         this._percent = Math.max(0, Math.min(100, percent));
         this._label.text = `${Math.round(this._percent)}%`;
-        (this._area as any).set_tooltip_text(detail);
         this._area.queue_repaint();
     }
 
