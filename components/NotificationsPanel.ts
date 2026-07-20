@@ -28,8 +28,10 @@ export class NotificationsPanel extends St.BoxLayout {
         this.add_child(header);
 
         this._scroll = new St.ScrollView({ x_expand: true, y_expand: true, overlay_scrollbars: true });
-        this._list = new St.BoxLayout({ vertical: true, x_expand: true });
-        this._scroll.set_child(this._list);
+        this._list = new St.BoxLayout({ vertical: true, x_expand: true, y_expand: true });
+        const viewport = new St.Viewport({ x_expand: true, y_expand: true });
+        viewport.add_child(this._list);
+        this._scroll.set_child(viewport);
         this.add_child(this._scroll);
 
         this._renderEmpty();

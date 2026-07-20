@@ -31,9 +31,11 @@ export class AppLauncherPanel extends St.BoxLayout {
 
         const body = new St.BoxLayout({ x_expand: true, y_expand: true });
 
-        this._sidebar = new St.BoxLayout({ vertical: true });
+        this._sidebar = new St.BoxLayout({ vertical: true, x_expand: true, y_expand: true });
+        const sidebarViewport = new St.Viewport({ x_expand: true, y_expand: true });
+        sidebarViewport.add_child(this._sidebar);
         const sidebarScroll = new St.ScrollView({ y_expand: true, overlay_scrollbars: true, style: 'width: 140px;' });
-        sidebarScroll.set_child(this._sidebar);
+        sidebarScroll.set_child(sidebarViewport);
         body.add_child(sidebarScroll);
 
         this._grid = new St.Viewport({
