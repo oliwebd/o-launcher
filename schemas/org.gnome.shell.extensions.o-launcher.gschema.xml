@@ -12,12 +12,12 @@
           path="/org/gnome/shell/extensions/o-launcher/">
 
     <key name="toggle-shortcut" type="as">
-      <default>['&lt;Super&gt;d']</default>
+      <default>['&lt;Super&gt;space']</default>
       <summary>Keybinding to toggle the dashboard</summary>
     </key>
 
     <key name="background-style" enum="org.gnome.shell.extensions.o-launcher.BackgroundStyle">
-      <default>'blur'</default>
+      <default>'solid'</default>
       <summary>Glassmorphic background style for the side panels</summary>
     </key>
 

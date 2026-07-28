@@ -1,34 +1,32 @@
-/* O-Launcher — Material 3 glass theme
-   Palette derived from a single indigo seed (#4F5B92), per M3 tonal-palette
-   convention: surfaces step up in lightness, one accent carries all
-   interactive states. Weather/stat accents are secondary tonal pops, not a
-   second unrelated palette. */
+/* O-Launcher — Solid surface theme
+   Palette: indigo seed #4F5B92, M3 tonal-palette convention.
+   All panels are opaque solid surfaces — no blur, no glassmorphism. */
 
 .ol-dashboard-root {
     background-color: rgba(0, 0, 0, 0);
 }
 
-/* ---------- Shared glass panel (everything except the launcher) ---------- */
+/* ---------- Shared solid panel (weather, calendar, music, stats, notifications) ---------- */
 .ormic-panel {
-    background-color: rgba(255, 255, 255, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: #F3F4F8;
+    border: 1px solid rgba(79, 91, 146, 0.1);
     border-radius: 28px;
-    box-shadow: 0 8px 32px rgba(30, 35, 60, 0.14);
+    box-shadow: 0 4px 20px rgba(30, 35, 60, 0.10);
     padding: 20px;
 }
 
-.ormic-panel.ormic-bg-transparent-20 { background-color: rgba(255, 255, 255, 0.2); }
-.ormic-panel.ormic-bg-transparent-30 { background-color: rgba(255, 255, 255, 0.3); }
-.ormic-panel.ormic-bg-transparent-50 { background-color: rgba(255, 255, 255, 0.5); }
-.ormic-panel.ormic-bg-solid { background-color: #F3F4F8; }
+/* Background-style overrides (solid is the canonical style; others kept for compat) */
+.ormic-panel.ormic-bg-transparent-20 { background-color: #F3F4F8; }
+.ormic-panel.ormic-bg-transparent-30 { background-color: #F3F4F8; }
+.ormic-panel.ormic-bg-transparent-50 { background-color: #F3F4F8; }
+.ormic-panel.ormic-bg-solid           { background-color: #F3F4F8; }
 
-/* The one sharp, opaque surface in the dashboard: the app launcher. It is
-   deliberately NOT translucent so dense text/icon content stays legible. */
+/* ---------- App launcher panel (opaque, sharp) ---------- */
 .ormic-launcher-panel {
     background-color: #FBFBFE;
-    border: 1px solid rgba(79, 91, 146, 0.12);
+    border: 1px solid rgba(79, 91, 146, 0.10);
     border-radius: 28px;
-    box-shadow: 0 8px 32px rgba(30, 35, 60, 0.18);
+    box-shadow: 0 4px 20px rgba(30, 35, 60, 0.12);
 }
 
 /* ---------- Typography ---------- */
@@ -99,7 +97,7 @@
 /* ---------- Stat rings ---------- */
 .ormic-stat-tile {
     border-radius: 24px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(79, 91, 146, 0.06);
     padding: 12px;
 }
 .ormic-stat-value { font-size: 20px; font-weight: 700; }
