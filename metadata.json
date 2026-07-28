@@ -2,7 +2,7 @@
   "uuid": "o-launcher@oliwebd.github.com",
   "name": "O-Launcher",
   "description": "A floating Material-style dashboard for GNOME Shell: weather, calendar, MPRIS music player, live system stats, notifications feed, and a fast app launcher with search + categories.",
-  "shell-version": ["46", "47", "48", "49", "50"],
+  "shell-version": ["48", "49", "50"],
   "url": "https://github.com/oliwebd/o-launcher",
   "settings-schema": "org.gnome.shell.extensions.o-launcher",
   "gettext-domain": "o-launcher"
