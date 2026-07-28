@@ -1,6 +1,6 @@
 # O-Launcher — GNOME Shell Extension
 
-A floating dashboard for GNOME Shell **46–50**, built with TypeScript/GJS and a
+A floating dashboard for GNOME Shell **48–50**, built with TypeScript/GJS and a
 provider-per-data-source architecture. Wraps a fast app launcher in a full
 dashboard — weather, calendar, music, live system stats, and notifications
 around it, all in a single modal dialog.
